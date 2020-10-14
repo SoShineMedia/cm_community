@@ -23,6 +23,43 @@
     <link href="{{ site.baseurl }}/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{ site.baseurl }}/assets/css/stylish-portfolio.min.css" rel="stylesheet">
+    {% if page.tree %}
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+      
+      text {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+      }
+      
+      .title {
+        font-size: larger;
+        text-align: center;
+      }
+          
+      .name {
+        font-weight: bold;
+      }
+      
+      .about {
+        fill: #777;
+        font-size: smaller;
+      }
+      
+      .lifespan {
+        fill: #2c5;
+      }
+      
+      .link {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+      
+      .node {
+        fill: blue;
+      }
+        </style>
+    {% endif %}
 </head>
 
 <body id="page-top">
