@@ -1,11 +1,14 @@
 <script src="{{site.baseurl}}/assets/js/lunr.js"></script>
+<script>
+    function reset(){
+        document.getElementById("graph").innerHTML = "";
+        reorg();
+    }
+</script>
 
-<style>
-    
-</style>
-
-<div class="wrap-search">
-    <div class="d-flex align-items-center ml-auto">
+<div class="wrap-search row align-items-center justify-content-center">
+    <button onclick="reset()" class="btn btn-primary mx-4 rounded" type="button"><i class="fas fa-refresh show-search"></i>Reset</button>
+    <div class="d-flex align-items-center ml-auto">        
         <i class="fas fa-search show-search"></i>
         <form class="bd-search ml-3" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
             <input type="text" class="form-control bigradius text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>

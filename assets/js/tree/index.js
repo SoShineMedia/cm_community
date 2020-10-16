@@ -2,6 +2,7 @@
 var previousGraph;
 var previousFamily;
 function GraphToDTreeConverter(graphData, rootId) {
+  console.log(rootId);
   var hFamily = previousFamily;
   if (graphData !== previousGraph) {
     hFamily = importGraph(graphData);

@@ -153,53 +153,53 @@ FamilyGraphData = {
   ]
 }
 
-//var data = GraphToDTreeConverter(FamilyGraphData, 2);
-
-get("{{ site.baseurl }}/assets/js/tree.json").then(function(response) {
-	//var data =JSON.parse(response);
-    console.log(JSON.stringify(FamilyGraphData));
-	data = GraphToDTreeConverter(FamilyGraphData, 2);
-	console.log(JSON.stringify(data));
-	
-	dTree.init( data, {
-		target: "#graph",
-		debug: true,
-		height: 800,
-		width: 1200,
-		callbacks: {
-			nodeClick: function(name, extra) {
-			console.log(name);
-			},
-			textRenderer: function(name, extra, textClass) {
-				// THis callback is optinal but can be used to customize
-			// how the text is rendered without having to rewrite the entire node
-			// from screatch.
-				if (extra && extra.nickname)
-				name = name + " (" + extra.nickname + ")";
-				dob = (extra && extra.dob) ? extra.dob : "-";
-				return "<b align='center' class='" + textClass + "'>" + name + "</b><p>" + dob + "</p>";
-			},
-			nodeRenderer: function(name, x, y, height, width, extra, id, nodeClass, textClass, textRenderer) {
-			// This callback is optional but can be used to customize the
-			// node element using HTML.
-			let node = '';
-			node += '<div ';
-			node += 'style="height:100%;width:100%;" ';
-			node += 'class="' + nodeClass + '" ';
-			node += 'id="node' + id + '">\n';
-			node += textRenderer(name, extra, textClass);
-			node += '</div>';
-			return node;
-			}
-		}
-	});
-}, function(error) {
-  console.error("Failed!", error);
-})
-
-
-console.log("done!!");
+function reorg(id=0){
+	    //document.getElementById("graph").innerHTML = "";
+		get("{{ site.baseurl }}/assets/js/tree.json").then(function(response) {
+			data = GraphToDTreeConverter(FamilyGraphData, id);
+				
+			dTree.init( data, {
+				target: "#graph",
+				debug: true,
+		        height: 800,
+				width: 1200,
+				callbacks: {
+					nodeClick: function(name, extra,data) {
+						document.getElementById("graph").innerHTML = "";
+						reorg(extra.id);
+					},
+					textRenderer: function(name, extra, textClass) {
+						// THis callback is optinal but can be used to customize
+					// how the text is rendered without having to rewrite the entire node
+					// from screatch.
+						if (extra && extra.nickname)
+						name = name + " (" + extra.nickname + ")";
+						dob = (extra && extra.dob) ? extra.dob : "-";
+						return "<b align='center' class='" + textClass + "'>" + name + "</b><p>" + dob + "</p>";
+					},
+					nodeRenderer: function(name, x, y, height, width, extra, id, nodeClass, textClass, textRenderer) {
+					// This callback is optional but can be used to customize the
+					// node element using HTML.
+					let node = '';
+					node += '<div ';
+					node += 'style="height:100%;width:100%;" ';
+					node += 'class="' + nodeClass + '" ';
+					node += 'id="node' + id + '">\n';
+					node += textRenderer(name, extra, textClass);
+					node += '</div>';
+					return node;
+					}
+				}
+			});
+		}, function(error) {
+		console.error("Failed!", error);
+		})		
+}
+reorg();
 </script>
 
 <!--add search-->
-{{ content }}
+<p class="align-center center">{{ content }}</p>
+<!-- Search -->
+{% include search-lunr.html %}
+
