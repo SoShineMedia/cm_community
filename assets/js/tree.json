@@ -1,48 +1,79 @@
-{
-    "name": "Clifford Shanks",
-    "born": 1862,
-    "died": 1906,
-    "location": "Petersburg, VA",
-    "parents": [
-      {
-        "name": "James Shanks",
-        "born": 1831,
-        "died": 1884,
-        "location": "Petersburg, VA",
-        "parents": [
-          {
-            "name": "Robert Shanks",
-            "born": 1781,
-            "died": 1871,
-            "location": "Ireland/Petersburg, VA"
-          },
-          {
-            "name": "Elizabeth Shanks",
-            "born": 1795,
-            "died": 1871,
-            "location": "Ireland/Petersburg, VA"
-          }
-        ]
+[{
+  "name": "Carl Worrel",                         
+  "class": "man",                          
+  "textClass": "nodeText",                  
+  "depthOffset": 1,                         
+  "marriages": [{
+      "spouse":{
+        "name": "Enid",
+        "class":"woman"
       },
-      {
-        "name": "Ann Emily Brown",
-        "born": 1826,
-        "died": 1866,
-        "location": "Brunswick/Petersburg, VA",
-        "parents": [
-          {
-            "name": "Henry Brown",
-            "born": 1792,
-            "died": 1845,
-            "location": "Montgomery, NC"
-          },
-          {
-            "name": "Sarah Houchins",
-            "born": 1793,
-            "died": 1882,
-            "location": "Montgomery, NC"
-          }
-        ]
-      }
-    ]
-  }
+      "children":[{
+        "name": "hopper",
+        "class": "man"
+
+      }]
+    },
+    {                           
+    "spouse": {                             
+      "name": "Joan Bispham",
+      "class": "woman"
+    },
+    "children": [{                          
+      "name": "Donna Worrel Alleyne",
+      "class": "woman",                          
+      "textClass": "nodeText",                 
+      "depthOffset": 1,                         
+      "marriages": [{                           
+        "spouse": {                             
+            "name": "Lawrence Alleyne",
+            "class": "man"
+        },
+        "children": [{                          
+            "name": "Olivia",
+            "class": "woman",                          
+            "textClass": "nodeText",                 
+            "depthOffset": 1,                         
+            "marriages": [{                           
+                "spouse": {                             
+                "name": "Mother"
+                },
+                "children": [{                          
+                "name": "Child"
+                }]
+            }]
+             
+        },
+        {                          
+            "name": "Shaniece",
+            "class": "woman",                          
+            "textClass": "nodeText",                 
+            "depthOffset": 1,                         
+            "marriages": [{                           
+                "spouse": {                             
+                "name": "Mother"
+                },
+                "children": [{                          
+                "name": "Child"
+                }]
+            }]  
+        },
+        {                          
+            "name": "Javan",
+            "class": "man",                          
+            "textClass": "nodeText",                 
+            "depthOffset": 1,                         
+            "marriages": [{                           
+                "spouse": {                             
+                "name": "Mother"
+                },
+                "children": [{                          
+                "name": "Child"
+                }]
+            }] 
+        }]
+  }] 
+    }]
+  }]                              
+}]
+

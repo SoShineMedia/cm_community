@@ -1,77 +1,205 @@
 ---
 layout: default
 ---
-  <script>
-  const margin = { top: 0, right: 320, bottom: 0, left: 0 }
-const fullWidth = 960
-const fullHeight = 500
-const width = fullWidth - margin.left - margin.right
-const height = fullHeight - margin.top - margin.bottom
+<div id="graph"></div>
+<script>
+treeData = [{
+  "name": "Niclas Superlongsurname",
+  "class": "man",
+  "textClass": "emphasis",
+  "marriages": [{"spouse": {
+          "name": "Alandra",
+          "class": "woman"
+        }},{
+    "spouse": {
+      "name": "Iliana",
+      "class": "woman",
+      "extra": {
+      	"nickname": "Illi"
+      }
+    },
+    "children": [{
+      "name": "James",
+      "class": "man",
+      "marriages": [{
+        "spouse": {
+          "name": "Alexandra",
+          "class": "woman"
+        },
+        "children": [{
+          "name": "Eric",
+          "class": "man",
+          "marriages": [{
+            "spouse": {
+              "name": "Eva",
+              "class": "woman"
+            }
+          }]
+        }, {
+          "name": "Jane",
+          "class": "woman"
+        }, {
+          "name": "Jasper",
+          "class": "man"
+        }, {
+          "name": "Emma",
+          "class": "woman"
+        }, {
+          "name": "Julia",
+          "class": "woman"
+        }, {
+          "name": "Jessica",
+          "class": "woman"
+        }]
+      }]
+    }]
+  }]
+}]
 
-const tree = d3.tree()
-	.separation((a, b) => ((a.parent === b.parent) ? 1 : 0.5))
-	.size([height, width])
+function get(url) {
+  // Return a new promise.
+  return new Promise(function(resolve, reject) {
+    // Do the usual XHR stuff
+    var req = new XMLHttpRequest();
+    req.open('GET', url);
 
-const svg = d3.select('body')
-	.append('svg')
-	.attr('width', fullWidth)
-	.attr('height', fullHeight)
+    req.onload = function() {
+      // This is called even on 404 etc
+      // so check the status
+      if (req.status == 200) {
+        // Resolve the promise with the response text
+        resolve(req.response);
+      }
+      else {
+        // Otherwise reject with the status text
+        // which will hopefully be a meaningful error
+        reject(Error(req.statusText));
+      }
+    };
 
-const g = svg.append('g')
-	.attr('transform', `translate(${margin.left},${margin.top})`)
+    // Handle network errors
+    req.onerror = function() {
+      reject(Error("Network Error"));
+    };
 
-g.append('text')
-	.text('Chalky Mount Ancestry')
-	.attr('class', 'title')
-	.attr('x', 50)
-	.attr('y', 50)
-
-const elbow = (d, i) => {
-	return `M${d.source.y},${d.source.x}H${d.target.y},V${d.target.x}${d.target.children ? '' : 'h' + margin.right}`
+    // Make the request
+    req.send();
+  });
+}
+FamilyGraphData = {
+  "persons": [
+    {
+      "id": 0,
+      "name": "Parent1",
+      "gender": "man"
+    },
+    {
+      "id": 1,
+      "name": "Parent2",
+      "gender": "woman"
+    },
+    {
+      "id": 2,
+      "name": "Child11",
+      "gender": "woman"
+    },
+    {
+      "id": 3,
+      "name": "Child22",
+      "gender": "man"
+	},
+	{
+      "id": 4,
+      "name": "Child4p",
+      "gender": "man"
+	},
+	{
+      "id": 5,
+      "name": "Childpp",
+      "gender": "woman"
+	},
+	{
+      "id": 6,
+      "name": "Child6",
+      "gender": "man"
+	},
+	{
+      "id": 7,
+      "name": "Childghg6",
+      "gender": "man"
+	},
+	{
+      "id": 8,
+      "name": "Childkk6",
+      "gender": "man"
+    }
+  ],
+  "connections": [
+    {
+      "partner1Id": 0,
+      "partner2Id": 1,
+      "childrenIds": [2, 3]
+	},
+	{
+      "partner1Id": 0,
+      "partner2Id": 4,
+      "childrenIds": [6]
+	},
+	{
+      "partner1Id": 4,
+      "partner2Id": 7,
+      "childrenIds": [8]
+	}
+  ]
 }
 
-d3.json("{{ site.baseurl }}/assets/js/tree.json", (err, json) => {
-	if (err) throw err
+//var data = GraphToDTreeConverter(FamilyGraphData, 2);
 
-	const nodes = d3.hierarchy(json, (d) => d.parents)
-
-	// maps hierarchy to tree layout
-	const treeNodes = tree(nodes)
-
-	// adds links between nodes
-	const link = g.selectAll('.link')
-		.data(treeNodes.links())
-		.enter().append('path')
-		.attr('class', 'link')
-		.attr('d', elbow)
-
-	const node = g.selectAll('.node')
-		.data(treeNodes.descendants())
-		.enter().append('g')
-		.attr('class', 'node')
-		.attr( 'transform', d => `translate(${d.y},${d.x})`)
-
-	node.append('text')
-		.attr('class', 'name')
-		.attr('x', 8)
-		.attr('y', -6)
-		.text(d => `${d.data.name}`)
-
-	node.append('text')
-		.attr('x', 8)
-		.attr('y', 8)
-		.attr('dy', '.71em')
-		.attr('class', 'about lifespan')
-		.text(d => `${d.data.born} - ${d.data.died}`)
-
-	node.append('text')
-		.attr('class', 'about location')
-		.attr('x', 8)
-		.attr('y', 8)
-		.attr('dy', '1.86em')
-		.text(d => `${d.data.location}`)
+get("{{ site.baseurl }}/assets/js/tree.json").then(function(response) {
+	//var data =JSON.parse(response);
+    console.log(JSON.stringify(FamilyGraphData));
+	data = GraphToDTreeConverter(FamilyGraphData, 2);
+	console.log(JSON.stringify(data));
+	
+	dTree.init( data, {
+		target: "#graph",
+		debug: true,
+		height: 800,
+		width: 1200,
+		callbacks: {
+			nodeClick: function(name, extra) {
+			console.log(name);
+			},
+			textRenderer: function(name, extra, textClass) {
+				// THis callback is optinal but can be used to customize
+			// how the text is rendered without having to rewrite the entire node
+			// from screatch.
+				if (extra && extra.nickname)
+				name = name + " (" + extra.nickname + ")";
+				dob = (extra && extra.dob) ? extra.dob : "-";
+				return "<b align='center' class='" + textClass + "'>" + name + "</b><p>" + dob + "</p>";
+			},
+			nodeRenderer: function(name, x, y, height, width, extra, id, nodeClass, textClass, textRenderer) {
+			// This callback is optional but can be used to customize the
+			// node element using HTML.
+			let node = '';
+			node += '<div ';
+			node += 'style="height:100%;width:100%;" ';
+			node += 'class="' + nodeClass + '" ';
+			node += 'id="node' + id + '">\n';
+			node += textRenderer(name, extra, textClass);
+			node += '</div>';
+			return node;
+			}
+		}
+	});
+}, function(error) {
+  console.error("Failed!", error);
 })
 
-  </script>
+
+console.log("done!!");
+</script>
+
 <!--add search-->
 {{ content }}
