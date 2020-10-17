@@ -1,0 +1,40 @@
+<script src="{{site.baseurl}}/assets/js/lunr.js"></script>
+<script>
+    function reset(){
+        document.getElementById("graph").innerHTML = "";
+        reorg();
+    }
+
+    function tree_search(name){
+        var id ;
+        //find name in file
+        get("{{ site.baseurl }}/assets/js/tree.json").then(function(response) {
+            var people = response.persons;
+            var person = people.find(el => el.name === name);
+            id = person.id;
+        }, function(error) {
+		    console.error("Failed!", error);
+		});
+        //if exist get id
+        document.getElementById("graph").innerHTML = "";
+        reorg(id);
+        //else
+        return 0;
+    }
+</script>
+
+<div class="wrap-search row align-items-center justify-content-center">
+    <button onclick="reset()" class="btn btn-primary mx-4 rounded" type="button"><i class="fas fa-refresh show-search"></i>Reset</button>
+    <div class="d-flex align-items-center ml-auto">        
+        <i class="fas fa-search show-search"></i>
+        <form class="bd-search ml-3" onSubmit="return tree_search(document.getElementById('lunrsearch').value);">
+            <input type="text" class="form-control bigradius text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+        </form>
+    </div>
+</div>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="{{site.baseurl}}/assets/js/lunrsearchengine.js"></script>
