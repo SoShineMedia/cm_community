@@ -14,7 +14,18 @@
 
 <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Bootstrap Core CSS -->
+<link href="{{ site.baseurl }}/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom Fonts -->
+<link href="{{ site.baseurl }}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+<link href="{{ site.baseurl }}/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="{{ site.baseurl }}/assets/css/stylish-portfolio.min.css" rel="stylesheet">
+
+<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+
 
 </head>
 
@@ -40,26 +51,8 @@ ga('send', 'pageview');
 
 <!-- Begin Sidebar Navigation
 ================================================== -->
-
-<div class="sidebar">    
-</div>   
-<div class="nav-icon">
-    <div class="hamburger-bar"></div>
-</div>
-<div id="blackover-nav" class="blackover"></div>
-<nav id="menu">
-    <ul>
-        <h3>Navigation</h3>
-        <li><a href="{{ site.baseurl }}/">Home</a></li>
-        <li><a href="{{ site.baseurl }}/about">About <span class="badge badge-primary">Memoirs Jekyll Theme</span></a></li>
-        <li><a target="_blank" href="https://bootstrapstarter.com/bootstrap-templates/jekyll-theme-memoirs/">Get Memoirs</a></li>      
-        <li><a href="{{ site.baseurl }}/contact">Contact</a></li>       
-    </ul>   
-</nav>
-
-{% include search-lunr.html %}
-
-
+<!-- Navigation -->
+{% include navigation.html %}
 <!-- End Sidebar Navigation
 ================================================== -->
 
@@ -139,6 +132,14 @@ ga('send', 'pageview');
 {% if page.layout == 'post' %}
 <script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
 {% endif %}
+
+ <!-- Bootstrap core JavaScript -->
+ <script src="{{ site.baseurl }}/vendor/jquery/jquery.min.js"></script>
+ <script src="{{ site.baseurl }}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <!-- Plugin JavaScript -->
+ <script src="{{ site.baseurl }}/vendor/jquery-easing/jquery.easing.min.js"></script>
+ <!-- Custom scripts for this template -->
+ <script src="{{ site.baseurl }}/assets/js/stylish-portfolio.min.js"></script>
 
 </body>
 </html>
