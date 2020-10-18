@@ -2,7 +2,7 @@
 var previousGraph;
 var previousFamily;
 function GraphToDTreeConverter(graphData, rootId) {
-  console.log(rootId);
+  
   var hFamily = previousFamily;
   if (graphData !== previousGraph) {
     hFamily = importGraph(graphData);
@@ -26,35 +26,21 @@ function convert(family, rootId) {
       hRootId = hCurrentPerson.id;
     }
   }
-  //console.log(family.members[hRootId]);
   
   var hPersonStructure = generateDTreeRecursive(family.members[hRootId]);
   return [hPersonStructure];
 }
 function getAParent(familyMember) {
-  // Es ist egal welches Elternteil gewählt wird, da es nur wichtig ist, dass der Stammbaum nach oben der ausgewählten Person erscheint.
   return familyMember.parentConnection.partner1;
 }
 function generateDTreeRecursive(familyMember) {
-  //console.log(familyMember);
+  
   var hD3TreePerson = createFamilyMemberDTreeFormat(familyMember);
-  //console.log(familyMember.connection);
-  // Hat die Person eine Verbindung?
+  
   if (familyMember.connection !== undefined) {
-    //console.log("NOT NULL",familyMember.connection);
-    hD3TreePerson["marriages"] = [];
-    //var hPartner = getPartnerOfFamilyMember(familyMember);
-    //console.log(hPartner);
-    /*var hPartnerObject = createPartnerDTreeFormat(hPartner);
-    // Kinder ermitteln
-    var hChildren = [];
-    familyMember.connection.children.forEach(child => {
-      // Nun wird das jeweilige Kind und dessen Daten und Beziehungen analysiert (rekursiv)
-      // Das Ergebnis des resultierenden Teilbaums wird hier in die Datenstruktur hinzugefügt.
-      var hChildData = generateDTreeRecursive(child);
-      hChildren.push(hChildData);
-    });*/
     
+    hD3TreePerson["marriages"] = [];
+        
     familyMember.connections.forEach(person => {
       var spouse = person.getPartner(familyMember);
       var hPartnerObject = createPartnerDTreeFormat(spouse);
@@ -67,9 +53,6 @@ function generateDTreeRecursive(familyMember) {
       insertFamilyInfoToDTreePerson(hD3TreePerson, hPartnerObject, hChildren);
     });
 
-
-    //console.log(hD3TreePerson, hPartnerObject, hChildren);
-    //insertFamilyInfoToDTreePerson(hD3TreePerson, hPartnerObject, hChildren);
   }
   return hD3TreePerson;
 }
@@ -83,7 +66,6 @@ function createFamilyMemberDTreeFormat(familyMember) {
   };
 }
 function createPartnerDTreeFormat(partner) {
-  // Hat der Partner auch noch parent Informationen? Dann ist dort noch ein alternativer Root möglich und soll visuell markiert werden
   var genderClass = getGenderClassOfPartner(partner);
   return {
     name: partner.name,
@@ -96,29 +78,20 @@ function createPartnerDTreeFormat(partner) {
 function getPartnerOfFamilyMember(familyMember) {
   return familyMember.connection.getPartner(familyMember);
 }
-// Falls der Partner noch Elterninformationen hinterlegt hat, werden diese nicht als Baum dargestellt.
-// Das Vorhandensein eines weiteren Wurzelzweigs (Eltern) wird aber visuell hervorgehoben.
-// Für den Transport dieser Information wird die Gender-Eigentschaft zweckentfremdet.
+
 function getGenderClassOfPartner(partner) {
   var hGender = partner.gender;
   if (partner.parentConnection !== undefined) {
     hGender += "-alternativeRoot";
   }
+  hGender += " node";
   return hGender;
 }
 function insertFamilyInfoToDTreePerson(d3TreePerson, partnerObject, children) {
-  // Im aktuellen Familienmitglied noch diese Verbindungsinformmationen hinterlegen
-  /*d3TreePerson["marriages"] = [
-    {
-      spouse: partnerObject,
-      children: children
-    }
-  ];*/
   d3TreePerson["marriages"].push({
     spouse: partnerObject,
     children: children
   });
-
 }
 
 function importGraph(graphData) {
@@ -130,7 +103,6 @@ function importGraph(graphData) {
   return hNewFamily;
 }
 function getFamilyMembers(familyMember) {
-  // Sortiert damit ich über den ArrayIndex zugreifen kann. Hier wäre ein Dictionary wesentlich schöner
   var hFamilyMember = familyMember.sort(comparePersonsByIdAsc);
   var hFamilyMembers = [];
   hFamilyMember.forEach(member => {
@@ -148,9 +120,6 @@ function comparePersonsByIdAsc(a, b) {
   return 0;
 }
 function createConnectionsBetweenMembers(family, connections) {
-  // Die Familienmitglieder wurden eingelesen
-  // Jetzt müssen die Verbindungen erstellt werden und mit Infos gefüllt werden
-  // In diesem Zuge bekommen auf die jeweiligen Mitglieder einen Verweis auf die Verbindung gesetzt
   connections.forEach(connection => {
     var hPartner1 = family.members[connection.partner1Id];
     var hPartner2 = family.members[connection.partner2Id];

@@ -1,0 +1,156 @@
+{
+    "persons": [
+      {
+        "id": 0,
+        "name": "Glenroy Morris",
+        "gender": "man"
+      },
+      {
+        "id": 1,
+        "name": "Patricia Morris",
+        "gender": "woman"
+      },
+      {
+        "id": 2,
+        "name": "Kelvin Morris",
+        "gender": "man"
+      },
+      {
+        "id": 3,
+        "name": "Kwahme Morris",
+        "gender": "man"
+      },
+      {
+        "id": 4,
+        "name": "Mervin Henry",
+        "gender": "man"
+      },
+      {
+        "id": 5,
+        "name": "Caline Henry",
+        "gender": "woman"
+      },
+      {
+        "id": 6,
+        "name": "Malike Henry",
+        "gender": "man"
+      },
+      {
+        "id": 7,
+        "name": "Kenroy White",
+        "gender": "man"
+      },
+      {
+        "id": 8,
+        "name": "Shaniece White",
+        "gender": "woman"
+      },
+      {
+        "id": 9,
+        "name": "Lawrence Alleyne",
+        "gender": "man"
+      },
+      {
+        "id": 10,
+        "name": "Donna Alleyne",
+        "gender": "woman"
+      },
+      {
+        "id": 11,
+        "name": "Javan Alleyne",
+        "gender": "man"
+      },
+      {
+        "id": 12,
+        "name": "Olivia Alleyne",
+        "gender": "woman"
+      },
+      {
+        "id": 13,
+        "name": "Zavier Alleyne",
+        "gender": "man"
+      },
+      {
+        "id": 14,
+        "name": "Kadia Andrews",
+        "gender": "woman"
+      },
+      {
+        "id": 15,
+        "name": "Davion Andrews",
+        "gender": "man"
+      },
+      {
+        "id": 16,
+        "name": "Kadion Andrews",
+        "gender": "man"
+      },
+      {
+        "id": 17,
+        "name": "Rudder",
+        "gender": "man"
+      },
+      {
+        "id": 18,
+        "name": "Mrs Rudder",
+        "gender": "woman"
+      },
+      {
+        "id": 19,
+        "name": "Angella Rudder",
+        "gender": "woman"
+      },
+      {
+        "id": 20,
+        "name": "Kadeem Rudder",
+        "gender": "man"
+      },
+      {
+        "id": 21,
+        "name": "Olivia Alleyne",
+        "gender": "woman"
+      },
+      {
+        "id": 22,
+        "name": "Olivia Alleyne",
+        "gender": "woman"
+      },
+      {
+        "id": 23,
+        "name": "Olivia Alleyne",
+        "gender": "woman"
+      },
+      {
+        "id": 24,
+        "name": "Olivia Alleyne",
+        "gender": "woman"
+      }
+    ],
+    "connections": [
+      {
+        "partner1Id": 0,
+        "partner2Id": 1,
+        "childrenIds": [2, 3]
+      },
+      {
+        "partner1Id": 4,
+        "partner2Id": 5,
+        "childrenIds": [6]
+      },
+      {
+        "partner1Id": 7,
+        "partner2Id": 8,
+        "childrenIds": []
+      },
+      {
+        "partner1Id": 9,
+        "partner2Id": 10,
+        "childrenIds": [8,11,12]
+      },
+      {
+        "partner1Id": 17,
+        "partner2Id": 18,
+        "childrenIds": [1,19]
+      } 
+    ]
+  }
