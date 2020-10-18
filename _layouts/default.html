@@ -15,6 +15,8 @@
     <meta name="description" content="{{ description }}">
     {% if page.keywords %}
     <meta name="keywords" content="{{ keywords }}">{% endif %}
+
+    <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="{{ site.baseurl }}/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Fonts -->
@@ -70,7 +72,6 @@
 <body id="page-top">
     <!-- Navigation -->
     {% include navigation.html %}
-    
 
     {{ content }}
 
