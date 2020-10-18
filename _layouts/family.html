@@ -154,10 +154,11 @@ FamilyGraphData = {
 }
 
 function reorg(id=0){
-	    //document.getElementById("graph").innerHTML = "";
-		get("{{ site.baseurl }}/assets/js/tree.json").then(function(response) {
-			data = GraphToDTreeConverter(FamilyGraphData, id);
-				
+	  
+		get("{{ site.baseurl }}/assets/js/people.json").then(function(response) {
+      var json = JSON.parse(response);
+      data = GraphToDTreeConverter(json, id);
+			console.log(data);	
 			dTree.init( data, {
 				target: "#graph",
 				debug: true,
@@ -169,17 +170,13 @@ function reorg(id=0){
 						reorg(extra.id);
 					},
 					textRenderer: function(name, extra, textClass) {
-						// THis callback is optinal but can be used to customize
-					// how the text is rendered without having to rewrite the entire node
-					// from screatch.
-						if (extra && extra.nickname)
+					if (extra && extra.nickname)
 						name = name + " (" + extra.nickname + ")";
 						dob = (extra && extra.dob) ? extra.dob : "-";
 						return "<b align='center' class='" + textClass + "'>" + name + "</b><p>" + dob + "</p>";
 					},
 					nodeRenderer: function(name, x, y, height, width, extra, id, nodeClass, textClass, textRenderer) {
-					// This callback is optional but can be used to customize the
-					// node element using HTML.
+					
 					let node = '';
 					node += '<div ';
 					node += 'style="height:100%;width:100%;" ';
