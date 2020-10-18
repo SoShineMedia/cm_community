@@ -1,0 +1,79 @@
+[{
+  "name": "Carl Worrel",                         
+  "class": "man",                          
+  "textClass": "nodeText",                  
+  "depthOffset": 1,                         
+  "marriages": [{
+      "spouse":{
+        "name": "Enid",
+        "class":"woman"
+      },
+      "children":[{
+        "name": "hopper",
+        "class": "man"
+
+      }]
+    },
+    {                           
+    "spouse": {                             
+      "name": "Joan Bispham",
+      "class": "woman"
+    },
+    "children": [{                          
+      "name": "Donna Worrel Alleyne",
+      "class": "woman",                          
+      "textClass": "nodeText",                 
+      "depthOffset": 1,                         
+      "marriages": [{                           
+        "spouse": {                             
+            "name": "Lawrence Alleyne",
+            "class": "man"
+        },
+        "children": [{                          
+            "name": "Olivia",
+            "class": "woman",                          
+            "textClass": "nodeText",                 
+            "depthOffset": 1,                         
+            "marriages": [{                           
+                "spouse": {                             
+                "name": "Mother"
+                },
+                "children": [{                          
+                "name": "Child"
+                }]
+            }]
+             
+        },
+        {                          
+            "name": "Shaniece",
+            "class": "woman",                          
+            "textClass": "nodeText",                 
+            "depthOffset": 1,                         
+            "marriages": [{                           
+                "spouse": {                             
+                "name": "Mother"
+                },
+                "children": [{                          
+                "name": "Child"
+                }]
+            }]  
+        },
+        {                          
+            "name": "Javan",
+            "class": "man",                          
+            "textClass": "nodeText",                 
+            "depthOffset": 1,                         
+            "marriages": [{                           
+                "spouse": {                             
+                "name": "Mother"
+                },
+                "children": [{                          
+                "name": "Child"
+                }]
+            }] 
+        }]
+  }] 
+    }]
+  }]                              
+}]
+

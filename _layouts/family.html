@@ -1,0 +1,205 @@
+---
+layout: default
+---
+<div id="graph"></div>
+<script>
+treeData = [{
+  "name": "Niclas Superlongsurname",
+  "class": "man",
+  "textClass": "emphasis",
+  "marriages": [{"spouse": {
+          "name": "Alandra",
+          "class": "woman"
+        }},{
+    "spouse": {
+      "name": "Iliana",
+      "class": "woman",
+      "extra": {
+      	"nickname": "Illi"
+      }
+    },
+    "children": [{
+      "name": "James",
+      "class": "man",
+      "marriages": [{
+        "spouse": {
+          "name": "Alexandra",
+          "class": "woman"
+        },
+        "children": [{
+          "name": "Eric",
+          "class": "man",
+          "marriages": [{
+            "spouse": {
+              "name": "Eva",
+              "class": "woman"
+            }
+          }]
+        }, {
+          "name": "Jane",
+          "class": "woman"
+        }, {
+          "name": "Jasper",
+          "class": "man"
+        }, {
+          "name": "Emma",
+          "class": "woman"
+        }, {
+          "name": "Julia",
+          "class": "woman"
+        }, {
+          "name": "Jessica",
+          "class": "woman"
+        }]
+      }]
+    }]
+  }]
+}]
+
+function get(url) {
+  // Return a new promise.
+  return new Promise(function(resolve, reject) {
+    // Do the usual XHR stuff
+    var req = new XMLHttpRequest();
+    req.open('GET', url);
+
+    req.onload = function() {
+      // This is called even on 404 etc
+      // so check the status
+      if (req.status == 200) {
+        // Resolve the promise with the response text
+        resolve(req.response);
+      }
+      else {
+        // Otherwise reject with the status text
+        // which will hopefully be a meaningful error
+        reject(Error(req.statusText));
+      }
+    };
+
+    // Handle network errors
+    req.onerror = function() {
+      reject(Error("Network Error"));
+    };
+
+    // Make the request
+    req.send();
+  });
+}
+FamilyGraphData = {
+  "persons": [
+    {
+      "id": 0,
+      "name": "Parent1",
+      "gender": "man"
+    },
+    {
+      "id": 1,
+      "name": "Parent2",
+      "gender": "woman"
+    },
+    {
+      "id": 2,
+      "name": "Child11",
+      "gender": "woman"
+    },
+    {
+      "id": 3,
+      "name": "Child22",
+      "gender": "man"
+	},
+	{
+      "id": 4,
+      "name": "Child4p",
+      "gender": "man"
+	},
+	{
+      "id": 5,
+      "name": "Childpp",
+      "gender": "woman"
+	},
+	{
+      "id": 6,
+      "name": "Child6",
+      "gender": "man"
+	},
+	{
+      "id": 7,
+      "name": "Childghg6",
+      "gender": "man"
+	},
+	{
+      "id": 8,
+      "name": "Childkk6",
+      "gender": "man"
+    }
+  ],
+  "connections": [
+    {
+      "partner1Id": 0,
+      "partner2Id": 1,
+      "childrenIds": [2, 3]
+	},
+	{
+      "partner1Id": 0,
+      "partner2Id": 4,
+      "childrenIds": [6]
+	},
+	{
+      "partner1Id": 4,
+      "partner2Id": 7,
+      "childrenIds": [8]
+	}
+  ]
+}
+
+function reorg(id=0){
+	    //document.getElementById("graph").innerHTML = "";
+		get("{{ site.baseurl }}/assets/js/tree.json").then(function(response) {
+			data = GraphToDTreeConverter(FamilyGraphData, id);
+				
+			dTree.init( data, {
+				target: "#graph",
+				debug: true,
+		        height: 800,
+				width: 1200,
+				callbacks: {
+					nodeClick: function(name, extra,data) {
+						document.getElementById("graph").innerHTML = "";
+						reorg(extra.id);
+					},
+					textRenderer: function(name, extra, textClass) {
+						// THis callback is optinal but can be used to customize
+					// how the text is rendered without having to rewrite the entire node
+					// from screatch.
+						if (extra && extra.nickname)
+						name = name + " (" + extra.nickname + ")";
+						dob = (extra && extra.dob) ? extra.dob : "-";
+						return "<b align='center' class='" + textClass + "'>" + name + "</b><p>" + dob + "</p>";
+					},
+					nodeRenderer: function(name, x, y, height, width, extra, id, nodeClass, textClass, textRenderer) {
+					// This callback is optional but can be used to customize the
+					// node element using HTML.
+					let node = '';
+					node += '<div ';
+					node += 'style="height:100%;width:100%;" ';
+					node += 'class="' + nodeClass + '" ';
+					node += 'id="node' + id + '">\n';
+					node += textRenderer(name, extra, textClass);
+					node += '</div>';
+					return node;
+					}
+				}
+			});
+		}, function(error) {
+		console.error("Failed!", error);
+		})		
+}
+reorg();
+</script>
+
+<!--add search-->
+<p class="align-center center">{{ content }}</p>
+<!-- Search -->
+{% include search-lunr.html %}
+

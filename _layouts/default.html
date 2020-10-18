@@ -24,14 +24,54 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="{{ site.baseurl }}/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="{{ site.baseurl }}/assets/css/stylish-portfolio.min.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/stylish-portfolio.min.css" rel="stylesheet"> 
+    <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet"> 
+    <script src="{{ site.baseurl }}/vendor/jquery/jquery.min.js"></script>
+    {% if page.tree %}
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-dtree/dist/dTree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/tree/index.js"></script>
+    <style>
+      .linage {
+	    fill: none;
+	    stroke: #000;
+	}
+	.marriage {
+	    fill: none;
+	    stroke: black;
+	}
+	.man {
+	    background-color: lightblue;
+			border-style: solid;
+			border-width: 1px;
+			box-sizing: border-box;
+	}
+	.woman {
+			background-color: pink;
+			border-style: solid;
+			border-width: 1px;
+			box-sizing: border-box;
+	}
+	.emphasis{
+			font-style: italic;
+	}
+	p {
+		padding:0;
+		margin:0;
+	}
+	svg {
+		border-style: solid;
+		border-width: 1px;
+	}     
+      
+    </style>
+    {% endif %}
 </head>
 
 <body id="page-top">
     <!-- Navigation -->
     {% include navigation.html %}
-    <!-- Header --> 
-    {% include header.html %}
 
     {{ content }}
 
@@ -42,12 +82,15 @@
       <i class="fas fa-angle-up"></i>
     </a>
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ site.baseurl }}/vendor/jquery/jquery.min.js"></script>
+    
     <script src="{{ site.baseurl }}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Plugin JavaScript -->
     <script src="{{ site.baseurl }}/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for this template -->
     <script src="{{ site.baseurl }}/assets/js/stylish-portfolio.min.js"></script>
+    <!--script src="{{ site.baseurl }}/assets/js/prism.js"></script-->
+
+    <script src="{{ site.baseurl }}/assets/js/theme.js"></script>
     {% include google_analytics.html %}
 </body>
 
