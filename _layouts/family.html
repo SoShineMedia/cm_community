@@ -157,7 +157,8 @@ function reorg(index=0){
 	  
 		get("{{ site.baseurl }}/assets/js/people.json").then(function(response) {
       var json = JSON.parse(response);
-      var id = (index===0)? Math.floor(Math.random() * json.length) : index;
+      var id = (index===0)? Math.floor(Math.random() * json.persons.length) : index;
+      console.log(id,json.persons,length,json);
       data = GraphToDTreeConverter(json, id);
 			//console.log(data);	
 			dTree.init( data, {
