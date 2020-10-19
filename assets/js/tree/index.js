@@ -59,7 +59,7 @@ function generateDTreeRecursive(familyMember) {
 function createFamilyMemberDTreeFormat(familyMember) {
   return {
     name: familyMember.name,
-    class: familyMember.gender,
+    class: familyMember.gender + " node",
     extra: {
       id: familyMember.id
     }

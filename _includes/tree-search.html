@@ -5,21 +5,21 @@
         reorg();
     }
 
-    function tree_search(name){
+    function tree_search(str){
+        console.log(str);
         var id ;
         //find name in file
-        get("{{ site.baseurl }}/assets/js/tree.json").then(function(response) {
-            var people = response.persons;
-            var person = people.find(el => el.name === name);
-            id = person.id;
+        get("{{ site.baseurl }}/assets/js/people.json").then(function(response) {
+            var people = JSON.parse(response).persons;
+            
+            var person = people.find(({name}) => name.toLowerCase().indexOf(str) > -1);
+            id = person.id;            
+            document.getElementById("graph").innerHTML = "";
+            reorg(id);
         }, function(error) {
 		    console.error("Failed!", error);
 		});
-        //if exist get id
-        document.getElementById("graph").innerHTML = "";
-        reorg(id);
-        //else
-        return 0;
+        
     }
 </script>
 
@@ -27,8 +27,8 @@
     <button onclick="reset()" class="btn btn-primary mx-4 rounded" type="button"><i class="fas fa-refresh"></i>Reset</button> 
     <div class="d-flex align-items-center ml-auto">        
         <i class="fas fa-search show-search"></i>
-        <form class="bd-search ml-3" onSubmit="return tree_search(document.getElementById('lunrsearch').value);">
-            <input type="text" class="form-control bigradius text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+        <form class="bd-search ml-3" onSubmit="event.preventDefault(); return tree_search(document.getElementById('term').value);">
+            <input type="text" class="form-control bigradius text-small launch-modal-search" id="term" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
         </form>
     </div>
 </div>
