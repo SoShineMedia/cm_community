@@ -153,12 +153,13 @@ FamilyGraphData = {
   ]
 }
 
-function reorg(id=0){
+function reorg(index=0){
 	  
 		get("{{ site.baseurl }}/assets/js/people.json").then(function(response) {
       var json = JSON.parse(response);
+      var id = (index===0)? Math.floor(Math.random() * json.length) : index;
       data = GraphToDTreeConverter(json, id);
-			console.log(data);	
+			//console.log(data);	
 			dTree.init( data, {
 				target: "#graph",
 				debug: true,

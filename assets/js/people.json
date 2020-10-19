@@ -181,20 +181,35 @@
         "gender": "man"
       },
       {
-        "id": 35,
-        "name": "Olivia Alleyne",
+        "id": 36,
+        "name": "Mrs Bryan Dad's",
+        "gender": "man"
+      },
+      {
+        "id": 37,
+        "name": "Mr Rudder Dad",
+        "gender": "man"
+      },
+      {
+        "id": 38,
+        "name": "Unknown gran",
+        "gender": "man"
+      },
+      {
+        "id": 39,
+        "name": "mr rudder mom",
         "gender": "woman"
       },
       {
-        "id": 35,
-        "name": "Olivia Alleyne",
+        "id": 40,
+        "name": "mrs bryan mom",
         "gender": "woman"
       },
       {
-        "id": 35,
-        "name": "Olivia Alleyne",
+        "id": 41,
+        "name": "Unknown gran",
         "gender": "woman"
-      } 
+      }   
            
     ],
     "connections": [
@@ -242,6 +257,22 @@
         "partner1Id": 19,
         "partner2Id": 35,
         "childrenIds": [20]
-      }  
+      },
+      {
+        "partner1Id": 38,
+        "partner2Id": 41,
+        "childrenIds": [36,37]
+      },
+      {
+        "partner1Id": 36,
+        "partner2Id": 40,
+        "childrenIds": [29]
+      },
+      {
+        "partner1Id": 37,
+        "partner2Id": 39,
+        "childrenIds": [17]
+      }
+
     ]
   }
