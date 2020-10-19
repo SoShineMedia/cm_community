@@ -97,7 +97,7 @@
       },
       {
         "id": 19,
-        "name": "Angella Rudder",
+        "name": "Angela Rudder",
         "gender": "woman"
       },
       {
@@ -107,26 +107,102 @@
       },
       {
         "id": 21,
-        "name": "Olivia Alleyne",
+        "name": "Edna Henry",
         "gender": "woman"
       },
       {
         "id": 22,
-        "name": "Olivia Alleyne",
-        "gender": "woman"
+        "name": "Dick Springer",
+        "gender": "man"
       },
       {
         "id": 23,
-        "name": "Olivia Alleyne",
+        "name": "Cynthia Henry",
         "gender": "woman"
       },
       {
         "id": 24,
+        "name": "Urine Henry",
+        "gender": "woman"
+      },
+      {
+        "id": 25,
+        "name": "Monica Springer",
+        "gender": "woman"
+      },
+      {
+        "id": 26,
+        "name": "George Springer",
+        "gender": "man"
+      },
+      {
+        "id": 27,
+        "name": "Anesta Springer",
+        "gender": "woman"
+      },
+      {
+        "id": 28,
+        "name": "Claremont Bryan",
+        "gender": "man"
+      },
+      {
+        "id": 29,
+        "name": "Vernice Bryan",
+        "gender": "woman"
+      },
+      {
+        "id": 30,
+        "name": "Emerson Bryan",
+        "gender": "man"
+      },
+      {
+        "id": 31,
+        "name": "Jennie Bryan",
+        "gender": "woman"
+      },
+      {
+        "id": 32,
+        "name": "Josiah Bryan",
+        "gender": "man"
+      },
+      {
+        "id": 33,
+        "name": "Jeremy Bryan",
+        "gender": "man"
+      },
+      {
+        "id": 34,
+        "name": "Emerald Bryan",
+        "gender": "woman"
+      },
+      {
+        "id": 35,
         "name": "Olivia Alleyne",
         "gender": "woman"
-      }
+      },
+      {
+        "id": 35,
+        "name": "Olivia Alleyne",
+        "gender": "woman"
+      },
+      {
+        "id": 35,
+        "name": "Olivia Alleyne",
+        "gender": "woman"
+      },
+      {
+        "id": 35,
+        "name": "Olivia Alleyne",
+        "gender": "woman"
+      } 
+           
     ],
     "connections": [
+      {
+        "partner1Id": 21,
+        "partner2Id": 22,
+        "childrenIds": [4,23,24,25,26,27]
+      },
       {
         "partner1Id": 0,
         "partner2Id": 1,
@@ -151,6 +227,16 @@
         "partner1Id": 17,
         "partner2Id": 18,
         "childrenIds": [1,19]
-      } 
+      },
+      {
+        "partner1Id": 28,
+        "partner2Id": 29,
+        "childrenIds": [30]
+      },
+      {
+        "partner1Id": 30,
+        "partner2Id": 31,
+        "childrenIds": [32,33,34]
+      }  
     ]
   }
