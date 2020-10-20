@@ -285,14 +285,19 @@
       },
       {
         "id": 56,
-        "name": "Sam mother",
+        "name": "Lillian Small",
         "gender": "man"
       },
       {
         "id": 57,
-        "name": "Sam father",
+        "name": "Mr Wilkie",
         "gender": "man"
-      }      
+      },
+      {
+        "id": 58,
+        "name": "Stanley Wilkie",
+        "gender": "man"
+      }       
            
     ],
     "connections": [
@@ -359,7 +364,7 @@
       {
         "partner1Id": 42,
         "partner2Id": 43,
-        "childrenIds": [44,45,46,47,48]
+        "childrenIds": [44,45,46,47,48,58]
       },
       {
         "partner1Id": 49,
