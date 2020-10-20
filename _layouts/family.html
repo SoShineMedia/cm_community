@@ -164,7 +164,7 @@ function reorg(index=0){
 		get("{{ site.baseurl }}/assets/js/people.json").then(function(response) {
       var json = JSON.parse(response);
       var id = (index===0)? Math.floor(Math.random() * json.persons.length) : index;
-      console.log(id,json.persons,length,json);
+      
       data = GraphToDTreeConverter(json, id);
 			//console.log(data);	
 			dTree.init( data, {
@@ -178,9 +178,11 @@ function reorg(index=0){
 						reorg(extra.id);
 					},
 					textRenderer: function(name, extra, textClass) {
-					if (extra && extra.nickname)
-						name = name + " (" + extra.nickname + ")";
-						dob = (extra && extra.dob) ? extra.dob : "-";
+					  if (extra && extra.nickname){
+              name = name + " ~" + extra.nickname + "";
+            }
+            dob = (extra && extra.age) ? extra.age : "-";
+            
 						return "<b align='center' class='" + textClass + "'>" + name + "</b><p>" + dob + "</p>";
 					},
 					nodeRenderer: function(name, x, y, height, width, extra, id, nodeClass, textClass, textRenderer) {

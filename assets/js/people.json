@@ -209,7 +209,90 @@
         "id": 41,
         "name": "Unknown gran",
         "gender": "woman"
-      }   
+      },
+      {
+        "id": 42,
+        "name": "Milicent Wilkie",
+        "age":"1930-2011",
+        "gender": "woman"
+      },
+      {
+        "id": 43,
+        "name": "Sam Wilkie",
+        "age":"1922-2004",
+        "gender": "man"
+      },
+      {
+        "id": 44,
+        "name": "Winston Marshall",
+        "gender": "man"
+      },
+      {
+        "id": 45,
+        "name": "Harald Wilkie",
+        "gender": "man"
+      },
+      {
+        "id": 46,
+        "name": "Catherine Wilkie Springer",
+        "age":"",
+        "gender": "woman"
+      },
+      {
+        "id": 47,
+        "name": "Agnes Wilkie",
+        "gender": "woman"
+      },
+      {
+        "id": 48,
+        "name": "Velma Wilkie",
+        "gender": "woman"
+      },
+      {
+        "id": 49,
+        "name": "Amaborinze King (Marshall)",
+        "gender": "woman"
+      },
+      {
+        "id": 50,
+        "name": "Colvin King",
+        "gender": "man"
+      },
+      {
+        "id": 51,
+        "name": "Eudora Payne",
+        "gender": "woman"
+      },
+      {
+        "id": 52,
+        "name": "Colvin Marshall",
+        "gender": "man"
+      },
+      {
+        "id": 53,
+        "name": "Beryl Gill",
+        "gender": "woman"
+      },
+      {
+        "id": 54,
+        "name": "Delince Wilkie",
+        "gender": "woman"
+      },
+      {
+        "id": 55,
+        "name": "Pearly Wilkie",
+        "gender": "man"
+      },
+      {
+        "id": 56,
+        "name": "Sam mother",
+        "gender": "man"
+      },
+      {
+        "id": 57,
+        "name": "Sam father",
+        "gender": "man"
+      }      
            
     ],
     "connections": [
@@ -272,6 +355,21 @@
         "partner1Id": 37,
         "partner2Id": 39,
         "childrenIds": [17]
+      },
+      {
+        "partner1Id": 42,
+        "partner2Id": 43,
+        "childrenIds": [44,45,46,47,48]
+      },
+      {
+        "partner1Id": 49,
+        "partner2Id": 50,
+        "childrenIds": [42,51,52]
+      },
+      {
+        "partner1Id": 56,
+        "partner2Id": 57,
+        "childrenIds": [43,53,54,55]
       }
 
     ]
