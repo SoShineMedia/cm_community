@@ -57,21 +57,30 @@ function generateDTreeRecursive(familyMember) {
   return hD3TreePerson;
 }
 function createFamilyMemberDTreeFormat(familyMember) {
+  console.log(familyMember.age);
+  var age = familyMember.age ? familyMember.age : '-';
+  var nickname = familyMember.nickname ? familyMember.nickname : false;
   return {
     name: familyMember.name,
     class: familyMember.gender + " node",
     extra: {
-      id: familyMember.id
+      id: familyMember.id,
+      age: age,
+      nickname: nickname
     }
   };
 }
 function createPartnerDTreeFormat(partner) {
   var genderClass = getGenderClassOfPartner(partner);
+  var age = partner.age ? partner.age : '-';
+  var nickname = partner.nickname ? partner.nickname : false;
   return {
     name: partner.name,
     class: genderClass,
     extra: {
-      id: partner.id
+      id: partner.id,
+      age: age,
+      nickname: nickname
     }
   };
 }
@@ -106,7 +115,7 @@ function getFamilyMembers(familyMember) {
   var hFamilyMember = familyMember.sort(comparePersonsByIdAsc);
   var hFamilyMembers = [];
   hFamilyMember.forEach(member => {
-    hFamilyMembers.push(new FamilyMember(member.id, member.name, member.gender));
+    hFamilyMembers.push(new FamilyMember(member.id, member.name, member.gender, member.age, member.nickname));
   });
   return hFamilyMembers;
 }
@@ -176,13 +185,15 @@ class Family {
 }
 
 class FamilyMember {
-  constructor(id, name, gender) {
+  constructor(id, name, gender, age, nickname) {
     this.connection = undefined;
     this.connections = [];
     this.parentConnection = undefined;
     this.id = id;
     this.name = name;
     this.gender = gender;
+    this.age = age;
+    this.nickname = nickname;
   }
 
   setConnection(newConnection) {
