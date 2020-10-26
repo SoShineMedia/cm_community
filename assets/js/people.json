@@ -382,10 +382,123 @@
         "id": 75,
         "name": "Mrs Stanley",
         "gender": "woman"
-      }       
+      },
+      {
+        "id": 76,
+        "name": "Louise Springer",
+        "nickname":"Petty",
+        "gender": "woman"
+      },
+      {
+        "id": 77,
+        "name": "Henry Springer",
+        "gender": "man"
+      },
+      {
+        "id": 78,
+        "name": "Doris Campbell",
+        "nickname":"Mudda",
+        "age": "1924-",
+        "gender": "woman"
+      },
+      {
+        "id": 79,
+        "name": "Theophilus Murry",
+        "nickname":"T/Belfield",
+        "age": "1922-2016",
+        "gender": "man"
+      },
+      {
+        "id": 80,
+        "name": "Cyrilline Campbell",
+        "nickname":"Marcia",
+        "age": "1950-",
+        "gender": "woman"
+      },
+      {
+        "id": 81,
+        "name": "Lloyd Thompson",
+        "nickname":"Garvey",
+        "age": "1948-2010",
+        "gender": "man"
+      },
+      {
+        "id": 82,
+        "name": "Mary Murry",
+        "gender": "woman"
+      },
+      {
+        "id": 83,
+        "name": "Norman Holloway",
+        "gender": "man"
+      },
+      {
+        "id": 84,
+        "name": "O'Neal Yearwood",
+        "nickname":"O",
+        "age": "1964-",
+        "gender": "man"
+      },
+      {
+        "id": 85,
+        "name": "Gale Yearwood",
+        "age": "1969-",
+        "gender": "woman"
+      },
+      {
+        "id": 86,
+        "name": "Haskell Campbell",
+        "nickname":"Rodney",
+        "gender": "man"
+      },
+      {
+        "id": 87,
+        "name": "Dyonne Campbell",
+        "nickname":"Sam",
+        "age": "1975-",
+        "gender": "woman"
+      },
+      {
+        "id": 88,
+        "name": "Kenrick Campbell",
+        "nickname":"Kerry Bob/Chipp",
+        "age": "1973-",
+        "gender": "man"
+      },
+      {
+        "id": 89,
+        "name": "Chad Campbell",
+        "age": "1991-",
+        "gender": "man"
+      }        
            
     ],
     "connections": [
+      {
+        "partner1Id": 76,
+        "partner2Id": 77,
+        "childrenIds": [78]
+      },
+      {
+        "partner1Id": 84,
+        "partner2Id": 85,
+        "childrenIds": [89]
+      },
+      {
+        "partner1Id": 82,
+        "partner2Id": 83,
+        "childrenIds": [79]
+      },
+      {
+        "partner1Id": 80,
+        "partner2Id": 81,
+        "childrenIds": [85,86,87,88]
+      },
+      {
+        "partner1Id": 78,
+        "partner2Id": 79,
+        "childrenIds": [80]
+      },
       {
         "partner1Id": 21,
         "partner2Id": 22,
