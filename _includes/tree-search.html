@@ -6,14 +6,15 @@
     }
 
     function tree_search(str){
-        console.log(str);
         var id ;
-        //find name in file
+        
         get("{{ site.baseurl }}/assets/js/people.json").then(function(response) {
             var people = JSON.parse(response).persons;
-            
-            var person = people.find(({name}) => name.toLowerCase().indexOf(str) > -1);
-            id = person.id;            
+            console.log(people.length);
+            var person = people.find(identity => identity.name.toLowerCase().indexOf(str) > -1);
+            console.log(person);
+            id = person.id;  
+            console.log(person.name);          
             document.getElementById("graph").innerHTML = "";
             reorg(id);
         }, function(error) {

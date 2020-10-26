@@ -57,7 +57,7 @@ function generateDTreeRecursive(familyMember) {
   return hD3TreePerson;
 }
 function createFamilyMemberDTreeFormat(familyMember) {
-  console.log(familyMember.age);
+  //console.log(familyMember.age);
   var age = familyMember.age ? familyMember.age : '-';
   var nickname = familyMember.nickname ? familyMember.nickname : false;
   return {
