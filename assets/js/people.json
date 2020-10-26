@@ -548,7 +548,7 @@
         "id": 101,
         "name": "Mr Downes",
         "age": "",
-        "gender": "woman"
+        "gender": "man"
       },
       {
         "id": 102,
@@ -557,7 +557,7 @@
         "gender": "woman"
       },
       {
-        "id": 102,
+        "id": 103,
         "name": "Mrs Kenrick",
         "age": "",
         "gender": "woman"
@@ -569,6 +569,21 @@
         "partner1Id": 76,
         "partner2Id": 77,
         "childrenIds": [78]
+      },
+      {
+        "partner1Id": 86,
+        "partner2Id": 102,
+        "childrenIds": [96]
+      },
+      {
+        "partner1Id": 87,
+        "partner2Id": 101,
+        "childrenIds": [99,100]
+      },
+      {
+        "partner1Id": 88,
+        "partner2Id": 103,
+        "childrenIds": [97,98]
       },
       {
         "partner1Id": 84,
