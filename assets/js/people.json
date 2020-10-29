@@ -177,7 +177,9 @@
       },
       {
         "id": 35,
+
         "name": "Trevor Springer",
+
         "gender": "man"
       },
       {
@@ -187,7 +189,9 @@
       },
       {
         "id": 37,
+
         "name": "Gascoyn Rudder",
+
         "gender": "man"
       },
       {
@@ -197,17 +201,23 @@
       },
       {
         "id": 39,
+
         "name": "Keturah Rudder",
+
         "gender": "woman"
       },
       {
         "id": 40,
+
         "name": "Millicent Rudder",
+
         "gender": "woman"
       },
       {
         "id": 41,
+
         "name": "Lea Russell",
+
         "gender": "woman"
       },
       {
@@ -229,7 +239,9 @@
       },
       {
         "id": 45,
+
         "name": "Harold Wilkie",
+
         "gender": "man"
       },
       {
@@ -647,10 +659,12 @@
         "age": "-",
         "gender": "man"
       }               
+
            
     ],
     "connections": [
       {
+
         "partner1Id": 76,
         "partner2Id": 77,
         "childrenIds": [78]
@@ -691,6 +705,7 @@
         "childrenIds": [80,91,92,93,94,95]
       },
       {
+
         "partner1Id": 21,
         "partner2Id": 22,
         "childrenIds": [4,23,24,25,26,27]
@@ -719,6 +734,7 @@
         "partner1Id": 17,
         "partner2Id": 18,
         "childrenIds": [1,19,109,107]
+
       },
       {
         "partner1Id": 28,
@@ -764,6 +780,7 @@
         "partner1Id": 56,
         "partner2Id": 57,
         "childrenIds": [43,53,54,55]
+
       },
       {
         "partner1Id": 48,
@@ -819,6 +836,7 @@
         "partner1Id": 112,
         "partner2Id": 115,
         "childrenIds": []
+
       }
 
     ]
