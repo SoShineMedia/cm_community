@@ -6,14 +6,14 @@
     }
 
     function tree_search(str){
-        console.log(str);
+
         var id ;
-        //find name in file
+        
         get("{{ site.baseurl }}/assets/js/people.json").then(function(response) {
             var people = JSON.parse(response).persons;
-            
-            var person = people.find(({name}) => name.toLowerCase().indexOf(str) > -1);
-            id = person.id;            
+            var person = people.find(identity => identity.name.toLowerCase().indexOf(str.toLowerCase()) > -1);
+            id = person.id;                    
+
             document.getElementById("graph").innerHTML = "";
             reorg(id);
         }, function(error) {
@@ -28,7 +28,9 @@
     <div class="d-flex align-items-center ml-auto">        
         <i class="fas fa-search show-search"></i>
         <form class="bd-search ml-3" onSubmit="event.preventDefault(); return tree_search(document.getElementById('term').value);">
-            <input type="text" class="form-control bigradius text-small launch-modal-search" id="term" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+
+            <input type="text" class="form-control bigradius text-small launch-modal-search" id="term" name="q" maxlength="255" value="" placeholder="Type name here..."/>
+
         </form>
     </div>
 </div>

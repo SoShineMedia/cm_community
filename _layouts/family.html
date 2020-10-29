@@ -3,9 +3,11 @@ layout: default
 ---
 <div>
   <h1>Bimcestry</h1>
-  <div>
-    {% include adsense-under-header.html %}  
-  </div>
+
+  <!--div>
+     include adsense-under-header.html  
+  </div-->
+
 </div>
 <div id="graph"></div>
 <script>
@@ -166,7 +168,9 @@ function reorg(index=0){
       var id = (index===0)? Math.floor(Math.random() * json.persons.length) : index;
       
       data = GraphToDTreeConverter(json, id);
-			//console.log(data);	
+
+			console.log(JSON.stringify(data));	
+
 			dTree.init( data, {
 				target: "#graph",
 				debug: true,

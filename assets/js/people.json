@@ -87,12 +87,12 @@
       },
       {
         "id": 17,
-        "name": "Rudder",
+        "name": "Chesterfield Rudder",
         "gender": "man"
       },
       {
         "id": 18,
-        "name": "Mrs Rudder",
+        "name": "Ione Rudder",
         "gender": "woman"
       },
       {
@@ -177,7 +177,9 @@
       },
       {
         "id": 35,
-        "name": "Kadeem Father",
+
+        "name": "Trevor Springer",
+
         "gender": "man"
       },
       {
@@ -187,7 +189,9 @@
       },
       {
         "id": 37,
-        "name": "Mr Rudder Dad",
+
+        "name": "Gascoyn Rudder",
+
         "gender": "man"
       },
       {
@@ -197,17 +201,23 @@
       },
       {
         "id": 39,
-        "name": "mr rudder mom",
+
+        "name": "Keturah Rudder",
+
         "gender": "woman"
       },
       {
         "id": 40,
-        "name": "mrs bryan mom",
+
+        "name": "Millicent Rudder",
+
         "gender": "woman"
       },
       {
         "id": 41,
-        "name": "Unknown gran",
+
+        "name": "Lea Russell",
+
         "gender": "woman"
       },
       {
@@ -229,7 +239,9 @@
       },
       {
         "id": 45,
-        "name": "Harald Wilkie",
+
+        "name": "Harold Wilkie",
+
         "gender": "man"
       },
       {
@@ -297,11 +309,403 @@
         "id": 58,
         "name": "Stanley Wilkie",
         "gender": "man"
-      }       
+      },
+      {
+        "id": 59,
+        "name": "Tara Wilkie Sealy",
+        "gender": "woman"
+      },
+      {
+        "id": 60,
+        "name": "Laverne Wilkie",
+        "gender": "woman"
+      },
+      {
+        "id": 61,
+        "name": "Sheena Wilkie",
+        "gender": "woman"
+      },
+      {
+        "id": 62,
+        "name": "Shakelia Wilkie",
+        "gender": "woman"
+      },
+      {
+        "id": 63,
+        "name": "Sophia Wilkie",
+        "gender": "woman"
+      },
+      {
+        "id": 64,
+        "name": "Angeline Wilkie Lynch",
+        "gender": "woman"
+      },
+      {
+        "id": 65,
+        "name": "Jacqeline Wilkie",
+        "gender": "woman"
+      },
+      {
+        "id": 66,
+        "name": "Shernelle Wilkie",
+        "gender": "woman"
+      },
+      {
+        "id": 67,
+        "name": "Derick Springer",
+        "gender": "man"
+      },
+      {
+        "id": 68,
+        "name": "Mr Velma",
+        "gender": "man"
+      },
+      {
+        "id": 69,
+        "name": "Mr Agnes",
+        "gender": "man"
+      },
+      {
+        "id": 70,
+        "name": "Mr catherine",
+        "gender": "man"
+      },
+      {
+        "id": 71,
+        "name": "Roger Wilkie",
+        "gender": "man"
+      },
+      {
+        "id": 72,
+        "name": "Huston Wilkie",
+        "gender": "man"
+      },
+      {
+        "id": 73,
+        "name": "Mrs Harold Wilkie",
+        "gender": "woman"
+      },
+      {
+        "id": 74,
+        "name": "Kadeem Wilkie",
+        "gender": "man"
+      },
+      {
+        "id": 75,
+        "name": "Mrs Stanley",
+        "gender": "woman"
+      },
+      {
+        "id": 76,
+        "name": "Louise Springer",
+        "nickname":"Petty",
+        "gender": "woman"
+      },
+      {
+        "id": 77,
+        "name": "Henry Springer",
+        "gender": "man"
+      },
+      {
+        "id": 78,
+        "name": "Doris Campbell",
+        "nickname":"Mudda",
+        "age": "1924-",
+        "gender": "woman"
+      },
+      {
+        "id": 79,
+        "name": "Theophilus Murry",
+        "nickname":"T/Belfield",
+        "age": "1922-2016",
+        "gender": "man"
+      },
+      {
+        "id": 80,
+        "name": "Cyrilline Campbell",
+        "nickname":"Marcia",
+        "age": "1950-",
+        "gender": "woman"
+      },
+      {
+        "id": 81,
+        "name": "Lloyd Thompson",
+        "nickname":"Garvey",
+        "age": "1948-2010",
+        "gender": "man"
+      },
+      {
+        "id": 82,
+        "name": "Mary Murry",
+        "gender": "woman"
+      },
+      {
+        "id": 83,
+        "name": "Norman Holloway",
+        "gender": "man"
+      },
+      {
+        "id": 84,
+        "name": "O'Neal Yearwood",
+        "nickname":"O",
+        "age": "1964-",
+        "gender": "man"
+      },
+      {
+        "id": 85,
+        "name": "Gale Yearwood",
+        "age": "1969-",
+        "gender": "woman"
+      },
+      {
+        "id": 86,
+        "name": "Haskell Campbell",
+        "nickname":"Rodney",
+        "age": "1967-",
+        "gender": "man"
+      },
+      {
+        "id": 87,
+        "name": "Dyonne Campbell",
+        "nickname":"Sam",
+        "age": "1975-",
+        "gender": "woman"
+      },
+      {
+        "id": 88,
+        "name": "Kenrick Campbell",
+        "nickname":"Kerry Bob/Chipp",
+        "age": "1973-",
+        "gender": "man"
+      },
+      {
+        "id": 89,
+        "name": "Chad Campbell",
+        "age": "1991-",
+        "gender": "man"
+      },
+      {
+        "id": 90,
+        "name": "Hans Campbell",
+        "age": "2001-",
+        "gender": "man"
+      },
+      {
+        "id": 91,
+        "name": "Thelma Campbell",
+        "nickname":"Esther",
+        "age": "1943-",
+        "gender": "woman"
+      },
+      {
+        "id": 92,
+        "name": "Ophelia Shepherd",
+        "nickname":"Joan",
+        "age": "1947-",
+        "gender": "woman"
+      },
+      {
+        "id": 93,
+        "name": "Harold Campbell",
+        "nickname":"Harold Bush/Bush",
+        "age": "1941-",
+        "gender": "man"
+      },
+      {
+        "id": 94,
+        "name": "Durlon Campbell",
+        "nickname":"Shaggy",
+        "age": "1960-",
+        "gender": "man"
+      },
+      {
+        "id": 95,
+        "name": "Glenfield Campbell",
+        "nickname":"Price",
+        "age": "1952-",
+        "gender": "man"
+      },
+      {
+        "id": 96,
+        "name": "Shea Campbell",
+        "age": "1998-",
+        "gender": "man"
+      },
+      {
+        "id": 97,
+        "name": "TeddyNoah Campbell",
+        "age": "2011-",
+        "gender": "man"
+      },
+      {
+        "id": 98,
+        "name": "Joella Campbell",
+        "age": "2010-",
+        "gender": "woman"
+      },
+      {
+        "id": 99,
+        "name": "Tristan Downes",
+        "nickname":"Downesy",
+        "age": "1996-",
+        "gender": "man"
+      },
+      {
+        "id": 100,
+        "name": "Tauvia Downes",
+        "nickname":"Price",
+        "age": "2007-",
+        "gender": "woman"
+      },
+      {
+        "id": 101,
+        "name": "Adrian Downes",
+        "age": "1974",
+        "gender": "man"
+      },
+      {
+        "id": 102,
+        "name": "Sophia Campbell",
+        "age": "1971-",
+        "gender": "woman"
+      },
+      {
+        "id": 103,
+        "name": "Leanne Campbell",
+        "age": "1983-",
+        "gender": "woman"
+      },
+      {
+        "id": 104,
+        "name": "Winston Mayers",
+        "age": "-",
+        "gender": "man"
+      },
+      {
+        "id": 105,
+        "name": "Kevon Rudder",
+        "age": "-",
+        "gender": "man"
+      },
+      {
+        "id": 106,
+        "name": "Khaliq Rudder",
+        "age": "-",
+        "gender": "man"
+      },
+      {
+        "id": 107,
+        "name": "Julia Rudder",
+        "age": "-",
+        "gender": "woman"
+      },
+      {
+        "id": 108,
+        "name": "Kemari Rudder",
+        "age": "-",
+        "gender": "man"
+      },
+      {
+        "id": 109,
+        "name": "Shirley Rudder",
+        "age": "-",
+        "gender": "woman"
+      },
+      {
+        "id": 110,
+        "name": "Kevin Phillips",
+        "age": "-",
+        "gender": "man"
+      },
+      {
+        "id": 111,
+        "name": "Colin Phillips",
+        "age": "-",
+        "gender": "man"
+      },
+      {
+        "id": 112,
+        "name": "Kyle Rudder",
+        "age": "-",
+        "gender": "man"
+      },
+      {
+        "id": 113,
+        "name": "ms kevon",
+        "age": "-",
+        "gender": "man"
+      },
+      {
+        "id": 114,
+        "name": "Rosalind Hope",
+        "age": "-",
+        "gender": "woman"
+      },
+      {
+        "id": 115,
+        "name": "Katrina Rudder",
+        "age": "-",
+        "gender": "woman"
+      },
+      {
+        "id": 116,
+        "name": "unknown",
+        "age": "-",
+        "gender": "man"
+      },
+      {
+        "id": 117,
+        "name": "Khalon Campbell",
+        "age": "-",
+        "gender": "man"
+      }               
+
            
     ],
     "connections": [
       {
+
+        "partner1Id": 76,
+        "partner2Id": 77,
+        "childrenIds": [78]
+      },
+      {
+        "partner1Id": 86,
+        "partner2Id": 102,
+        "childrenIds": [96]
+      },
+      {
+        "partner1Id": 87,
+        "partner2Id": 101,
+        "childrenIds": [99,100]
+      },
+      {
+        "partner1Id": 88,
+        "partner2Id": 103,
+        "childrenIds": [97,98]
+      },
+      {
+        "partner1Id": 84,
+        "partner2Id": 85,
+        "childrenIds": [89,90]
+      },
+      {
+        "partner1Id": 82,
+        "partner2Id": 83,
+        "childrenIds": [79]
+      },
+      {
+        "partner1Id": 80,
+        "partner2Id": 81,
+        "childrenIds": [85,86,87,88]
+      },
+      {
+        "partner1Id": 78,
+        "partner2Id": 79,
+        "childrenIds": [80,91,92,93,94,95]
+      },
+      {
+
         "partner1Id": 21,
         "partner2Id": 22,
         "childrenIds": [4,23,24,25,26,27]
@@ -329,7 +733,8 @@
       {
         "partner1Id": 17,
         "partner2Id": 18,
-        "childrenIds": [1,19]
+        "childrenIds": [1,19,109,107]
+
       },
       {
         "partner1Id": 28,
@@ -375,6 +780,63 @@
         "partner1Id": 56,
         "partner2Id": 57,
         "childrenIds": [43,53,54,55]
+
+      },
+      {
+        "partner1Id": 48,
+        "partner2Id": 68,
+        "childrenIds": [59,60]
+      },
+      {
+        "partner1Id": 47,
+        "partner2Id": 69,
+        "childrenIds": [61,62,63]
+      },
+      {
+        "partner1Id": 46,
+        "partner2Id": 70,
+        "childrenIds": [64,65,66]
+      },
+      {
+        "partner1Id": 45,
+        "partner2Id": 73,
+        "childrenIds": [71,72]
+      },
+      {
+        "partner1Id": 75,
+        "partner2Id": 58,
+        "childrenIds": [74]
+      },
+      {
+        "partner1Id": 109,
+        "partner2Id": 104,
+        "childrenIds": [112]
+      },
+      {
+        "partner1Id": 109,
+        "partner2Id": 111,
+        "childrenIds": [105]
+      },
+      {
+        "partner1Id": 107,
+        "partner2Id": 110,
+        "childrenIds": [108]
+      },
+      {
+        "partner1Id": 105,
+        "partner2Id": 113,
+        "childrenIds": [106]
+      },
+      {
+        "partner1Id": 94,
+        "partner2Id": 114,
+        "childrenIds": [117,115]
+      },
+      {
+        "partner1Id": 112,
+        "partner2Id": 115,
+        "childrenIds": []
+
       }
 
     ]
