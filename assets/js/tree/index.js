@@ -65,6 +65,7 @@ function createFamilyMemberDTreeFormat(familyMember) {
   return {
     name: familyMember.name,
     class: familyMember.gender + " node",
+    
     extra: {
       id: familyMember.id,
       age: age,

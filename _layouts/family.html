@@ -161,7 +161,7 @@ FamilyGraphData = {
   ]
 }
 
-function reorg(index=0){
+function reorg(index=119){
 	  
 		get("{{ site.baseurl }}/assets/js/people.json").then(function(response) {
       var json = JSON.parse(response);
@@ -169,13 +169,13 @@ function reorg(index=0){
       
       data = GraphToDTreeConverter(json, id);
 
-			console.log(JSON.stringify(data));	
-
 			dTree.init( data, {
 				target: "#graph",
-				debug: true,
-		        height: 800,
-				width: 1200,
+				debug: false,
+		    height: 800,
+        width: 1200,
+        hideMarriageNodes: true,
+        marriageNodeSize: 10,
 				callbacks: {
 					nodeClick: function(name, extra,data) {
 						document.getElementById("graph").innerHTML = "";
@@ -188,7 +188,10 @@ function reorg(index=0){
             dob = (extra && extra.age) ? extra.age : "-";
             
 						return "<b align='center' class='" + textClass + "'>" + name + "</b><p>" + dob + "</p>";
-					},
+          },
+          nodeHeightSeperation: function(nodeWidth, nodeMaxHeight){
+            return nodeMaxHeight + nodeWidth;
+          },
 					nodeRenderer: function(name, x, y, height, width, extra, id, nodeClass, textClass, textRenderer) {
 					
 					let node = '';

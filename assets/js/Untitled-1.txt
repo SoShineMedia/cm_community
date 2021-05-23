@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" /><meta name="author" content="Alan Wiles" /><meta name="keyword" content="Dashboard, Admin, Alan Wiles, Template, Theme, Responsive, Fluid, Retina" /><title>
+	FSC eFiling
+</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style2.css" rel="stylesheet" /><link href="assets/css/style-responsive.css" rel="stylesheet" /><link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script
+
+    <![endif]-->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.nicescroll.js"></script>
+    <!--common script for all pages-->
+    <script src="assets/js/common-scripts.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <form method="post" action="./TrainingMaterials.aspx" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTY1NDU2MTA1Mg9kFgJmD2QWAgIDD2QWAgICDxYCHgdWaXNpYmxlaGRkTmzoyKdw51d9jUvHpaIAd9jDY+ZVndVwiuAdn4iB50U=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=PKDAmG0zPi05a446kF2Edro9gZaOUJjWJBv8fvOxWnAO6JtZ7C30o5EbiwdEUZjSzbE-8UVQG_pGsqQuD0bqYDI6yQAjol7q6BefJKfT1Kk1&amp;t=636420201829508876" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=iDBRW014NjQBlgz4upcn95g1gr3aR2hBz-hjWnWfF8XbAunIs-dINDCmgWt8YgEmaAQSCVqomGypy_PJZuwZaXut9nSchjezFZMkoLZ9RlXGoQSiCrgkFxjzUYHhSZDQiJT0kFLEPOYpcPFXJR9oTS-qrMmXXS73TDtGUTr2OLeKKPbF4limKZufqz9SAgjH0&amp;t=ffffffffcce8aaf2" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=Ubznqi89nqR9dQHWSeVFk609124mp9__1vZlpnwtSMMsK66Im9ZFcbOOZ7KrWk5Uap_hy8C728CWjYoyG7eCrT-91s1FsBJoYRh2ua80UCe1ZJi07AerMd7qmX7LjsNN-dTTqHLHMoZlqk4IIlvLNj4lbczFHoR3ea3hc2pFbP5GicawFj-yBp_gMWwOI4xM0&amp;t=ffffffffcce8aaf2" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="DE31460C" />
+</div>
+        <section id="container">
+            <header class="header black-bg">
+                <!--logo start-->
+                <a class="logo">
+                    <img class="banner-login" src="../assets/img/eFile-IT Logo Final.png" /> 
+                </a>
+                <!--logo end-->
+                
+                <div class="top-menu">
+                    
+                </div>
+
+            </header>
+            <!--header end-->
+            <!-- Added KTG 2017-11-16-->
+    <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+       <aside>
+          <div id="sidebar">   <!--class="nav-collapse ">
+         <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+                  <li class="sub-menu">
+                      <a class="active" href="../Account/Login.aspx" > <!-- Added KTG 2017-11-16-->
+                          <i style="color:ghostwhite ; font-size:medium" class="fa fa-key"></i>
+                             <span style="color:ghostwhite ; font-weight:600; font-size:medium">
+                         
+                          Login
+                          
+                          </span>
+                          
+                      </a>
+                     
+                  </li>
+				    		
+				  <li class="sub-menu">
+                      <a class="active" href="../About.aspx" >
+                          <i  style="color:ghostwhite ; font-size:medium" class="fa fa-group"></i>
+                          <span style="color:ghostwhite ; font-weight:600; font-size:medium">
+                         
+                          About eFiling
+                          
+                          </span>
+                          
+                      </a>
+                     
+                  </li>
+
+         			  
+				  <li class="sub-menu">
+                      <a class="active" href="../FAQ.aspx">
+                          <i style="color:ghostwhite ; font-size:medium" class="fa fa-cogs"></i>
+                            <span style="color:ghostwhite ; font-weight:700; font-size:medium">FAQs
+                         
+                         
+                          
+                          </span>
+                      </a>
+                    
+                  </li>
+                  <li class="sub-menu">
+                      <a class="active" href="../TrainingMaterials.aspx" >
+                          <i style="color:ghostwhite ; font-size:medium" class="fa fa-book"></i>
+                           <span style="color:ghostwhite ; font-weight:600; font-size:medium">
+                          
+                          
+                          Training Materials
+                          
+                          </span>
+                          
+                      </a>
+                     
+                  </li>
+                  <li class="-menu">
+                      <a class="active" href="../SupportPage.aspx" >
+                          <i style="color:ghostwhite ; font-size:medium" class="fa fa-book"></i>
+                            <span style="color:ghostwhite ; font-weight:600; font-size:medium">
+                          
+                          
+                         Technical Support
+                          
+                          </span>
+                          
+                      </a>
+				         
+			
+				          
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+          
+      <!--sidebar end-->
+            <!--main content start-->
+            <section id="main-content" class="container-fluid">
+                <section class="wrapper">
+
+                    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'Form1', ['tctl00$UpdatePanel1','UpdatePanel1'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+                    <div id="UpdatePanel1">
+	
+                            
+    <!-- style= "width :75%; margin-right: auto; margin-left :auto "  Added KTG 2017-11-16-->
+    <div class="row mt" style= "width :70%; margin-right: auto; margin-left :auto " >
+        <div class="col-lg-12">
+            <h1 style="margin-left: 10px">Training Materials</h1>
+            <br />
+            <div class="form-panel">
+                <div class="container" style="background-color:#f5f4f4; width: 850px;">
+                    <br />
+                    <br />
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse">Training Links</a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <h4>User Manuals</h4>
+                                <ol>
+                                     <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Registration Guide User Manual_V2.pdf" target="_blank">FSC eFiling MIS Registration Guide User Manual</a><br /></li>
+                                     <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Entity Portal User Manual.pdf" target="_blank">FSC eFiling MIS Entity Portal User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Credit Union Division Financial Returns User Manual.pdf" target="_blank">FSC eFiling MIS Credit Union Division Financial Returns User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Credit Union Division General Applications User Manual.pdf" target="_blank">FSC eFiling MIS Credit Union Division General Applications User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Credit Union Division Registration Licensing User Manual.pdf" target="_blank">FSC eFiling MIS Credit Union Division Registration & Licensing User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Insurance Division Financial Returns User Manual.pdf" target="_blank">FSC eFiling MIS Insurance Division Financial Returns User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Insurance Division General Application User Manual.pdf" target="_blank">FSC eFiling MIS Insurance Division General Application User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Insurance Registration Licensing User Manual.pdf" target="_blank">FSC eFiling MIS Insurance Registration & Licensing User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Pensions Division User Manual.pdf" target="_blank">FSC eFiling MIS Pensions Division User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Securities Division User Manual.pdf" target="_blank">FSC eFiling MIS Securities Division User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Classified Correspondence User Manual.pdf" target="_blank">FSC eFiling MIS Classified Correspondence User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS General Correspondence User Manual.pdf" target="_blank">FSC eFiling MIS General Correspondence User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Highly Sensitive Correspondence User Manual.pdf" target="_blank">FSC eFiling MIS Highly Sensitive Correspondence User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Regulator to Regulator Requests User Manual.pdf" target="_blank">FSC eFiling MIS Regulator to Regulator Requests User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Reports_Statistics Requests User Manual.pdf" target="_blank">FSC eFiling MIS Reports_Statistics Requests User Manual</a><br /></li>
+                                    <li><a class="btn-link" href="User Manuals\FSC eFiling MIS Support Requests User Manual.pdf" target="_blank">FSC eFiling MIS Support Requests User Manual</a><br /></li>
+                                </ol>
+                                <h4>Technical Support</h4>
+                                <ul>
+                                    <li>
+                                        <a class="btn-link" href="SupportPage.aspx">Support Page</a> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+                        
+</div>
+
+                </section>
+            </section>
+            <!-- /MAIN CONTENT -->
+
+            <!--main content end-->
+
+
+            <!--footer start-->
+            <footer class="site-footer">
+                <div class="text-center">
+                    Copyright 2020 Financial Services Commission - Barbados. All Rights Reserved
+             
+                </div>
+            </footer>
+            <!--footer end-->
+            <!-- js placed at the end of the document so the pages load faster -->
+
+            <!--script for this page-->
+        </section>
+    </form>
+</body>
+</html>
